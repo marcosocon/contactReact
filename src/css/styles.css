@@ -1,0 +1,13 @@
+ul li{
+  padding-top: 13px;
+  width: 100%;
+  border:1px solid white;
+  height: 45px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  list-style: none;
+}
+ul{
+  padding: 20px 0;
+}
