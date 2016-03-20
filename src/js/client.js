@@ -1,46 +1,309 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 
-import ContactsList from './components/ContactsList';
+import App from './components/App';
 
-let contacts =[
-  {
-    id: 1,
-    name: "Marcos",
-    phone: 3816714866
-  },
-  {
-    id: 2,
-    name: "Lucas",
-    phone: 3815541335
-  },
-  {
-    id: 3,
-    name: "Mama",
-    phone: 3816123712
-  },
-  {
-    id: 4,
-    name: "Papa",
-    phone: 3816566729
-  },
-  {
-    id: 5,
-    name: "Pablo",
-    phone: 3816954692
-  }
-]
-
-class App extends React.Component{
-  render(){
-    return(
-      <div>
-        <h1>Contacts - React</h1>
-        <ContactsList contacts={this.props.contacts}/>
-      </div>
-      )
-  }
-}
+let contacts = [{
+  "name": "Michelle",
+  "phone": "998-(426)643-8022"
+}, {
+  "name": "Betty",
+  "phone": "62-(800)343-4284"
+}, {
+  "name": "Shawn",
+  "phone": "62-(346)319-1174"
+}, {
+  "name": "Jimmy",
+  "phone": "62-(196)988-5386"
+}, {
+  "name": "Frank",
+  "phone": "48-(903)807-1336"
+}, {
+  "name": "Aaron",
+  "phone": "62-(901)503-0396"
+}, {
+  "name": "Louise",
+  "phone": "256-(182)316-9447"
+}, {
+  "name": "Earl",
+  "phone": "7-(185)291-4519"
+}, {
+  "name": "Betty",
+  "phone": "86-(306)809-9387"
+}, {
+  "name": "Raymond",
+  "phone": "260-(552)148-3902"
+}, {
+  "name": "Amy",
+  "phone": "374-(165)297-8086"
+}, {
+  "name": "Tina",
+  "phone": "46-(315)298-7962"
+}, {
+  "name": "Timothy",
+  "phone": "358-(864)238-2827"
+}, {
+  "name": "Virginia",
+  "phone": "351-(555)778-8887"
+}, {
+  "name": "Jeremy",
+  "phone": "62-(387)381-5332"
+}, {
+  "name": "Lawrence",
+  "phone": "7-(816)648-3385"
+}, {
+  "name": "Michael",
+  "phone": "7-(509)412-6712"
+}, {
+  "name": "Jesse",
+  "phone": "351-(558)136-5013"
+}, {
+  "name": "Jesse",
+  "phone": "591-(611)231-1733"
+}, {
+  "name": "Philip",
+  "phone": "358-(526)245-9741"
+}, {
+  "name": "Jose",
+  "phone": "51-(497)526-8504"
+}, {
+  "name": "Chris",
+  "phone": "86-(262)164-8738"
+}, {
+  "name": "Lillian",
+  "phone": "86-(243)524-9264"
+}, {
+  "name": "Teresa",
+  "phone": "62-(701)426-1020"
+}, {
+  "name": "Ruby",
+  "phone": "62-(933)376-4889"
+}, {
+  "name": "Diane",
+  "phone": "86-(766)815-4156"
+}, {
+  "name": "Carol",
+  "phone": "63-(223)259-5640"
+}, {
+  "name": "Wayne",
+  "phone": "62-(572)138-1177"
+}, {
+  "name": "Carl",
+  "phone": "86-(139)992-4109"
+}, {
+  "name": "Ralph",
+  "phone": "675-(897)331-5506"
+}, {
+  "name": "Marie",
+  "phone": "260-(853)833-7113"
+}, {
+  "name": "Gerald",
+  "phone": "55-(824)215-1906"
+}, {
+  "name": "Jack",
+  "phone": "267-(691)925-1614"
+}, {
+  "name": "Scott",
+  "phone": "66-(921)171-8035"
+}, {
+  "name": "Frances",
+  "phone": "48-(627)297-4949"
+}, {
+  "name": "Donald",
+  "phone": "62-(827)628-6086"
+}, {
+  "name": "Martin",
+  "phone": "30-(804)808-0942"
+}, {
+  "name": "Jessica",
+  "phone": "351-(612)809-5255"
+}, {
+  "name": "Melissa",
+  "phone": "55-(748)997-7590"
+}, {
+  "name": "Adam",
+  "phone": "55-(853)655-7246"
+}, {
+  "name": "Wayne",
+  "phone": "63-(616)639-4350"
+}, {
+  "name": "Nicholas",
+  "phone": "27-(399)566-4291"
+}, {
+  "name": "Barbara",
+  "phone": "57-(298)231-1538"
+}, {
+  "name": "Kimberly",
+  "phone": "55-(918)333-5829"
+}, {
+  "name": "Nancy",
+  "phone": "223-(592)154-0504"
+}, {
+  "name": "Nancy",
+  "phone": "86-(858)848-8919"
+}, {
+  "name": "Wanda",
+  "phone": "51-(996)323-7756"
+}, {
+  "name": "Alice",
+  "phone": "58-(465)499-1208"
+}, {
+  "name": "Marie",
+  "phone": "63-(562)569-7040"
+}, {
+  "name": "Harold",
+  "phone": "1-(806)306-9345"
+}, {
+  "name": "Sharon",
+  "phone": "66-(448)228-3598"
+}, {
+  "name": "Michael",
+  "phone": "7-(565)368-4005"
+}, {
+  "name": "Justin",
+  "phone": "62-(426)414-7496"
+}, {
+  "name": "Mark",
+  "phone": "681-(220)782-0205"
+}, {
+  "name": "Debra",
+  "phone": "86-(678)370-5338"
+}, {
+  "name": "Martin",
+  "phone": "48-(473)406-7833"
+}, {
+  "name": "Wayne",
+  "phone": "30-(674)216-3996"
+}, {
+  "name": "Earl",
+  "phone": "20-(308)235-1475"
+}, {
+  "name": "John",
+  "phone": "380-(287)461-4753"
+}, {
+  "name": "Matthew",
+  "phone": "66-(267)770-2685"
+}, {
+  "name": "Christine",
+  "phone": "92-(749)549-8840"
+}, {
+  "name": "Todd",
+  "phone": "976-(503)569-3095"
+}, {
+  "name": "Bobby",
+  "phone": "299-(201)579-0203"
+}, {
+  "name": "Amanda",
+  "phone": "420-(587)679-4869"
+}, {
+  "name": "Wayne",
+  "phone": "94-(304)273-5239"
+}, {
+  "name": "Jean",
+  "phone": "66-(258)734-4752"
+}, {
+  "name": "Craig",
+  "phone": "62-(366)364-4194"
+}, {
+  "name": "Juan",
+  "phone": "1-(415)218-7486"
+}, {
+  "name": "Alice",
+  "phone": "389-(826)551-1105"
+}, {
+  "name": "Mildred",
+  "phone": "63-(436)618-3503"
+}, {
+  "name": "Angela",
+  "phone": "63-(293)922-4231"
+}, {
+  "name": "Ralph",
+  "phone": "86-(710)518-6900"
+}, {
+  "name": "Brenda",
+  "phone": "86-(577)588-9419"
+}, {
+  "name": "Jane",
+  "phone": "30-(806)164-2360"
+}, {
+  "name": "Stephanie",
+  "phone": "216-(522)703-4312"
+}, {
+  "name": "Amy",
+  "phone": "7-(876)237-1615"
+}, {
+  "name": "Jesse",
+  "phone": "86-(384)352-5326"
+}, {
+  "name": "Annie",
+  "phone": "234-(446)177-3992"
+}, {
+  "name": "Ronald",
+  "phone": "380-(745)333-0544"
+}, {
+  "name": "Brenda",
+  "phone": "692-(776)984-8270"
+}, {
+  "name": "Willie",
+  "phone": "62-(354)871-7332"
+}, {
+  "name": "Terry",
+  "phone": "351-(272)542-1949"
+}, {
+  "name": "Kathryn",
+  "phone": "62-(718)660-1041"
+}, {
+  "name": "Phyllis",
+  "phone": "1-(223)145-0863"
+}, {
+  "name": "Walter",
+  "phone": "7-(136)319-7514"
+}, {
+  "name": "Sara",
+  "phone": "967-(391)340-7588"
+}, {
+  "name": "Wanda",
+  "phone": "86-(547)244-9932"
+}, {
+  "name": "Philip",
+  "phone": "63-(880)571-1442"
+}, {
+  "name": "John",
+  "phone": "7-(771)326-3133"
+}, {
+  "name": "Dorothy",
+  "phone": "86-(671)724-2347"
+}, {
+  "name": "Ruth",
+  "phone": "58-(228)816-0437"
+}, {
+  "name": "Linda",
+  "phone": "86-(927)624-2013"
+}, {
+  "name": "Anne",
+  "phone": "56-(813)750-8926"
+}, {
+  "name": "Ronald",
+  "phone": "86-(274)274-7764"
+}, {
+  "name": "Nancy",
+  "phone": "86-(855)930-9218"
+}, {
+  "name": "Diane",
+  "phone": "27-(382)204-4117"
+}, {
+  "name": "Stephen",
+  "phone": "54-(407)867-7467"
+}, {
+  "name": "George",
+  "phone": "62-(262)379-0344"
+}, {
+  "name": "Norma",
+  "phone": "242-(724)734-0825"
+}, {
+  "name": "Jimmy",
+  "phone": "86-(895)907-1230"
+}]
 
 
 ReactDOM.render( <App contacts={contacts} />, document.getElementById("app"));
