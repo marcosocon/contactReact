@@ -1,9 +1,17 @@
+body{
+  background-color: #037E8C;
+}
 ul li{
+  background-color: #F24C27;
+  box-shadow: 2px 2px 2px #000;
+  margin-top: 5px;
   padding-top: 13px;
   width: 100%;
+  border-radius:10px;
   border:1px solid white;
   height: 45px;
   text-align: center;
+  color: #FFFFFA;
   font-size: 15px;
   font-weight: bold;
   list-style: none;
